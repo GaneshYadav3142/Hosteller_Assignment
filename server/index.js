@@ -54,7 +54,18 @@ const resolvers = {
       return await Hostel.find({ destination: destinationId });
     },
     hostelCountByDestination: async () => {
-      //Implement logic to count hostels for each destination
+      const destinations = await Destination.find();
+      const counts = [];
+
+      for (const destination of destinations) {
+        const count = await Hostel.countDocuments({ destination: destination._id });
+        counts.push({
+          destination,
+          count,
+        });
+      }
+
+      return counts;
     },
   },
 
