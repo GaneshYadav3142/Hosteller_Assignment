@@ -7,9 +7,9 @@
 - [Backend Server](#backend-server)
 - [Frontend Server](#frontend-server)
 - [Screenshots](#screenshots)
-  - [Home Page](#home-page)
-  - [Hostel At Destination](#hostel-at-destination)
-  - [Each Destination Hostel Count](#each-destination-hostel-count)
+  - [Home Page (Page 1)](#home-page)
+  - [Hostel At Destination (Page 3)](#hostel-at-destination)
+  - [Each Destination Hostel Count (Page 3)](#each-destination-hostel-count)
   - [My Booking](#my-booking)
 - [App Functionality](#app-functionality)
   - [Book Hostel](#book-hostel)
@@ -50,7 +50,7 @@ Apollo Server and separate for backend and Frontend
 1. Open the another terminal, move to client directory:
 
    ```bash
-  cd client
+   cd client
 
 2. Move to my-app: 
    
