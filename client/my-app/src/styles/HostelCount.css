@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:30px;
-    margin:auto
+    margin:5% auto
 }
 
 .main-body{
@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-
+   margin-bottom: 5%;
 }
 
 .main-body>:nth-child(1){
@@ -40,3 +40,15 @@ h1,h2{
     text-align: center;
     font-size: large;
 }
+
+
+/* Media query for medium screens */
+@media (max-width: 768px) {
+    .hostelcount-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:30px;
+        margin:5% auto
+    }
+  }
+  

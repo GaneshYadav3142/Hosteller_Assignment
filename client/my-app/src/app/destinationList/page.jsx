@@ -2,7 +2,7 @@
 
 
 import React from 'react'
-import DestinationList from './destinationList'
+import DestinationList from '../(components)/destinationList'
 import { ApolloCache, ApolloProvider } from '@apollo/client'
 import client from '../lib/apollo'
 import store from '../redux/store'

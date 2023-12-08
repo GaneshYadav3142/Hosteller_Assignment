@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from 'next/router';
 import React from 'react'
-import HostelList from '../HostelList';
+import HostelList from '../../(components)/HostelList';
 import { ApolloProvider } from '@apollo/client';
 import client from '../../lib/apollo';
 import { Provider } from 'react-redux';

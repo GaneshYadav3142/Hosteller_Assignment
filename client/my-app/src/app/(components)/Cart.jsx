@@ -7,7 +7,10 @@ export const Cart = () => {
   const cart = useSelector((state) => state.cart);
    console.log(cart)
    const handleCancelBooking = (itemId) => {
+    const confirmed=window.confirm('Are you sure you want to cancel this booking?');
+    if(confirmed){
     dispatch(removeFromCart(itemId));
+    }
   };
   return (
     <div className='container'>
@@ -18,7 +21,7 @@ export const Cart = () => {
       <h1>Total Booking- {cart.length}</h1>
       {cart.map((el)=>{
         return(
-          <div className='cart-container'>
+          <div className='cart-container' key={el.id}>
             <div className='image-container'><img src={el.image} alt='image'/></div>
             <div>
              <h3 className='title'>{el.name}</h3>

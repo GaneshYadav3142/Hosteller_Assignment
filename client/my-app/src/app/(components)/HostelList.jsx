@@ -4,7 +4,9 @@ import { GET_HOSTELS_BY_DESTINATION } from '../lib/graphql';
 import "../../styles/HostelList.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../redux/cartAction';
-import LoadingSpinner from '../(components)/LoadingSpinner';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import LoadingSpinner from './LoadingSpinner';
 const HostelList = ({ destinationId }) => {
   console.log(destinationId.id)
   const id=destinationId.id
@@ -13,27 +15,28 @@ const HostelList = ({ destinationId }) => {
   });
 
   const cart = useSelector((state) => state.cart);
-
+  const dispatch = useDispatch();
   if (loading) return <LoadingSpinner/>;
   if (error) return <p>Error: {error.message}</p>;
 
 
   
-  const dispatch = useDispatch();
+  
   const handleBookNow = (item) => {
   const isItemInCart = cart.find((cartItem) => cartItem.id === item._id);
   if (isItemInCart) {
-    alert("Hostel is already booked by you! Check My Booking");
+    toast.error('Hostel is already booked by you! Check My Booking')
   } else {
     
     dispatch(addToCart({ id: item._id, name: item.name, image: item.image }));
-    alert("Booking Successful");
+    toast.success('Booking Successful');
   }
   };
   return (
     <div className="hostel-container">
     <h2 className="heading">Hostels Available</h2>
     <div className="data-div">
+    <ToastContainer/>
       {data.hostelsByDestination.map((hostel) => (
         <div key={hostel._id} className="hostel-card">
           <div className="image-container">

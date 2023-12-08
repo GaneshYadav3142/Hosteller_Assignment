@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import  {GET_DESTINATIONS}  from '../lib/graphql';
 import Link from 'next/link';
 import Image from 'next/image';
-import LoadingSpinner from '../(components)/LoadingSpinner';
+import LoadingSpinner from './LoadingSpinner';
 
 const DestinationList = () => {
   const { loading, error, data } = useQuery(GET_DESTINATIONS);

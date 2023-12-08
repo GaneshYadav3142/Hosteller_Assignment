@@ -4,6 +4,8 @@ import { useApollo } from '../app/lib/apollo';
 import store from '@/app/redux/store';
 import { Provider } from 'react-redux';
 import ReduxProvider from '@/app/redux/ReduxProvider';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function MyApp({ Component, pageProps }) {
  const apolloClient = useApollo(pageProps.initialApolloState);
@@ -13,7 +15,7 @@ function MyApp({ Component, pageProps }) {
     <ApolloProvider client={apolloClient}>
      
       <Component {...pageProps} />
-     
+      <ToastContainer />
     </ApolloProvider>
     </ReduxProvider>
   );

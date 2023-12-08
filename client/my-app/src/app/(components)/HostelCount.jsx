@@ -13,8 +13,8 @@ console.log(data)
     <div className='container'>
       <h1 className='header'>Hostel Count in Each Destination</h1>
       <div className='hostelcount-container'>
-        {data.hostelCountByDestination.map((ele) => (
-          <div key={ele.destination._id} className='main-body'>
+        {data.hostelCountByDestination.map((ele,i) => {
+         return( <div key={i} className='main-body'>
             <div className='image-container'>
            <img src={ele.destination.image} alt='image'/>
            </div>
@@ -22,8 +22,8 @@ console.log(data)
             <h1>{ele.destination.name}</h1>
               <p>No.of Hostels - {ele.count}</p>
               </div>
-          </div>
-        ))}
+          </div>)
+ })}
       
     </div>
     </div>
