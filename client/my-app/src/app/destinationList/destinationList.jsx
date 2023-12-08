@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import  {GET_DESTINATIONS}  from '../lib/graphql';
 import Link from 'next/link';
 import Image from 'next/image';
+import LoadingSpinner from '../(components)/LoadingSpinner';
 
 const DestinationList = () => {
   const { loading, error, data } = useQuery(GET_DESTINATIONS);
@@ -12,7 +13,7 @@ const DestinationList = () => {
 
   return (
      <div> 
-      <h1 className='text-center w-70'>Check out Destinations </h1>
+      <h1 className='text-center w-70'>Check Out Hostel Available </h1>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mx-auto w-70 mt-10">
       {data.destinations.map((destination) => (
           <Link key={destination._id} href={`/destinationList/${destination._id}`}>
@@ -31,11 +32,7 @@ const DestinationList = () => {
 };
 
 
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
-  </div>
-);
+
 
 
 export default DestinationList

@@ -3,7 +3,7 @@ import {  combineReducers, legacy_createStore } from 'redux';
 import {reducer as cartReducer} from './reducer';
 
 const rootReducer = combineReducers({
-  cartReducer,
+  cart:cartReducer,
 });
 
 const store = legacy_createStore(rootReducer);

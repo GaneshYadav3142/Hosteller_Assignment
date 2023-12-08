@@ -5,14 +5,17 @@ import React from 'react'
 import DestinationList from './destinationList'
 import { ApolloCache, ApolloProvider } from '@apollo/client'
 import client from '../lib/apollo'
+import store from '../redux/store'
+import { Provider } from 'react-redux'
+import ReduxProvider from '../redux/ReduxProvider'
 
  const Page = () => {
   return (
+    <ReduxProvider>
   <ApolloProvider client={client}>
-     <Provider store={store}>
       <DestinationList />
-      </Provider>
       </ApolloProvider>
+      </ReduxProvider>
   )
 }
 

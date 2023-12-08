@@ -1,15 +1,25 @@
 "use client"
 
 import { Fragment } from "react";
+import client from "./lib/apollo";
+import { ApolloProvider } from "@apollo/client";
+import DestinationList from "./destinationList/destinationList";
+import store from "./redux/store";
+import Navbar from "./(components)/Navbar";
+import { Provider } from "react-redux";
 
 
 
-export default function Home({children}) {
+export default function Home() {
  
     return (
       <Fragment>
-        
-        <main>{children}</main>
+        <Provider store={store}>
+        <ApolloProvider client={client}>
+          <Navbar/>
+        <DestinationList/>
+          </ApolloProvider>
+          </Provider>
       </Fragment>
     );
   

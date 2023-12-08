@@ -1,0 +1,116 @@
+/* styles/BookingList.css */
+/* 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cart-container {
+    display: flex;
+    align-items: center;
+   
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .image-container  {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .cancel-booking {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+ 
+  
+  @media screen and (max-width: 600px) {
+    .cart-container {
+      flex-direction: column;
+    }
+  
+    .image-container img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+   */
+
+
+   /* styles/BookingList.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .image-container {
+    width: 50%; /* Adjust the width based on your design preference */
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin-right: 15px;
+    overflow: hidden;
+    border-radius: 12pxpx;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    
+  }
+  
+  .cancel-booking {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Styling */
+  
+  @media screen and (max-width: 600px) {
+    .cart-container {
+      flex-direction: column;
+    }
+  
+    .image-container {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
