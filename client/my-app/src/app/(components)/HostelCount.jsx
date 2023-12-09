@@ -15,7 +15,7 @@ console.log(data)
       <div className='hostelcount-container'>
         {data.hostelCountByDestination.map((ele,i) => {
          return( <div key={i} className='main-body'>
-            <div className='image-container'>
+            <div className='img-container'>
            <img src={ele.destination.image} alt='image'/>
            </div>
             <div className='content'>

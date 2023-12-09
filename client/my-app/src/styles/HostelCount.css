@@ -22,12 +22,12 @@
     border-radius: 12px;
 }
 
-.image-container {
+.img-container {
     border-radius: 12px;
     overflow: hidden; 
 }
 
-.image-container img {
+.img-container img {
     width: 100%;
     height: auto;
     border-radius: 12px;
