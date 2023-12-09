@@ -4,10 +4,12 @@ const mongoose = require('mongoose');
 const cors=require("cors")
 const Destination = require('./models/destinationSchema');
 const Hostel = require('./models/hostelSchema');
+const dotenv=require("dotenv")
 
 const app = express();
+require('dotenv').config();
 app.use(cors())
-mongoose.connect("mongodb+srv://Ganesh:Yadav@cluster0.z7f4ecg.mongodb.net/Hosteller?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGO_URL);
 
 
 

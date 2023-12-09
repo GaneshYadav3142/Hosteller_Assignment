@@ -70,19 +70,19 @@
 /* Media query for medium screens */
 @media (max-width: 768px) {
   .hostel-card {
-    flex-direction: column; /* Change to column layout on medium screens */
-    gap: 1rem; /* Adjust gap for column layout */
+    flex-direction: column; 
+    gap: 1rem;
   }
 
   .image-container {
-    width: 100%; /* Adjust width for column layout */
-    height: auto; /* Adjust height for column layout */
+    width: 100%; 
+    height: auto; 
     margin-right: 0;
-    margin-bottom: 1rem; /* Add margin-bottom for spacing */
+    margin-bottom: 1rem;
   }
 
   .hostel-details {
-    width: 100%; /* Adjust width for column layout */
-    padding: 0; /* Remove padding for column layout */
+    width: 100%; 
+    padding: 0; 
   }
 }

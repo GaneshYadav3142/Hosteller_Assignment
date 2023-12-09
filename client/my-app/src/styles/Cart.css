@@ -71,8 +71,8 @@
   }
   
   .image-container {
-    width: 50%; /* Adjust the width based on your design preference */
-    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 50%; 
+    flex-shrink: 0; 
     margin-right: 15px;
     overflow: hidden;
     border-radius: 12pxpx;
