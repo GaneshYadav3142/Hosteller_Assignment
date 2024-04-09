@@ -10,6 +10,7 @@ import LoadingSpinner from './LoadingSpinner';
 const HostelList = ({ destinationId }) => {
   console.log(destinationId.id)
   const id=destinationId.id
+  console.log(typeof(id))
   const { loading, error, data } = useQuery(GET_HOSTELS_BY_DESTINATION, {
     variables: { destinationId:id },
   });
